@@ -52,9 +52,14 @@
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a class="page-scroll" href="#page-top"></a>
+                    <li>
+                        <a class="page-scroll" href="painel.php">Painel</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="ficha.php">Físico</a>
+                        <a class="page-scroll" href="pagamento.php">Pagamento</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="relatorio.php">Relatorios</a>
                     </li>
                 </ul>
             </div>
@@ -66,30 +71,32 @@
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
-                <h2>FICHA</h2>
+                <h2>PAGOS NO MÊS:</h2>
                 <form action="Script_do_Formulario.php" method="post">
                     <div class="red">
                         <br>
-                        Data de Troca: <div class="white"> 21/4 </div>
+                        CPF: <div class="white"> 894725515452 </div>
                         <br>
-                        Vencimento do pagamento: <div class="white"> 22/5 </div>
+                        Data do pagamento: <div class="white"> 22/5 </div>
                         <br>
-                        Divisão: <div class="white">PEITO/COSTAS/PERNAS</div>
+                        Nome: <div class="white"> João Pereira </div>
                         <br>
-                        Repetições: <div class="white"> 3x por exercício</div>
+                        -----------------------------------------------------
                         <br>
-                        
-                        PEITO:<br>
-                        <div class="white">
-                        SUPINO RETO<br>
-                        SUPINO INCLINADO<br>
-                        VOADOR<br>
-                        </div>
-                        <br><br>COSTAS:<br>
-                        <div class="white">
-                        SUPINO RETO<br>
-                        SUPINO INCLINADO<br>
-                        VOADOR<br>
+                        CPF: <div class="white"> 894725515452 </div>
+                        <br>
+                        Data do pagamento: <div class="white"> 22/5 </div>
+                        <br>
+                        Nome: <div class="white"> João Pereira </div>
+                        <br>
+                        -----------------------------------------------------
+                        <br>
+                        CPF: <div class="white"> 894725515452 </div>
+                        <br>
+                        Data do pagamento: <div class="white"> 22/5 </div>
+                        <br>
+                        Nome: <div class="white"> João Pereira </div>
+                        <br>
                         </div>
                     </div> 
                 </form> 

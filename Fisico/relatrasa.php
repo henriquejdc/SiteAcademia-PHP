@@ -54,9 +54,14 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="ficha.php">Físico</a>
+                        <a class="page-scroll" href="painel.php">Painel</a>
                     </li>
-                </ul>
+                    <li>
+                        <a class="page-scroll" href="pagamento.php">Pagamento</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="relatorio.php">Relatorios</a>
+                    </li>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -66,33 +71,38 @@
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
-                <h2>FICHA</h2>
-                <form action="Script_do_Formulario.php" method="post">
+                <h2>Relatorio de atrasados:</h2>
                     <div class="red">
                         <br>
-                        Data de Troca: <div class="white"> 21/4 </div>
+                        CPF: <div class="white"> 895245284671 </div>
                         <br>
                         Vencimento do pagamento: <div class="white"> 22/5 </div>
                         <br>
-                        Divisão: <div class="white">PEITO/COSTAS/PERNAS</div>
+                        Nome: <div class="white"> Eduardo Pereira </div>
                         <br>
-                        Repetições: <div class="white"> 3x por exercício</div>
+                        Dias por semana: <div class="white"> 3x </div>
                         <br>
-                        
-                        PEITO:<br>
-                        <div class="white">
-                        SUPINO RETO<br>
-                        SUPINO INCLINADO<br>
-                        VOADOR<br>
-                        </div>
-                        <br><br>COSTAS:<br>
-                        <div class="white">
-                        SUPINO RETO<br>
-                        SUPINO INCLINADO<br>
-                        VOADOR<br>
-                        </div>
+                        --------------------------------------------------------
+                        <br>
+                        CPF: <div class="white"> 895245284671 </div>
+                        <br>
+                        Vencimento do pagamento: <div class="white"> 22/5 </div>
+                        <br>
+                        Nome: <div class="white"> Eduardo Pereira </div>
+                        <br>
+                        Dias por semana: <div class="white"> 3x </div>
+                        <br>
+                        --------------------------------------------------------
+                        <br>
+                        CPF: <div class="white"> 895245284671 </div>
+                        <br>
+                        Vencimento do pagamento: <div class="white"> 22/5 </div>
+                        <br>
+                        Nome: <div class="white"> Eduardo Pereira </div>
+                        <br>
+                        Dias por semana: <div class="white"> 3x </div>
+                        <br>
                     </div> 
-                </form> 
         </div>
     </section>
 <footer>

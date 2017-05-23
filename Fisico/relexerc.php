@@ -54,7 +54,16 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="ficha.php">Físico</a>
+                        <a class="page-scroll" href="tabelaexerc.php">Exercicios</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="cficha.php">Cadastro Ficha</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="relatoriof.php">Relatorio Fichas</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="avali.html">Avaliação</a>
                     </li>
                 </ul>
             </div>
@@ -66,30 +75,25 @@
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
-                <h2>FICHA</h2>
+                <h2>TABELA EXERCICIOS</h2>
                 <form action="Script_do_Formulario.php" method="post">
                     <div class="red">
                         <br>
-                        Data de Troca: <div class="white"> 21/4 </div>
+                        EXERCÍCIOS:
                         <br>
-                        Vencimento do pagamento: <div class="white"> 22/5 </div>
-                        <br>
-                        Divisão: <div class="white">PEITO/COSTAS/PERNAS</div>
-                        <br>
-                        Repetições: <div class="white"> 3x por exercício</div>
-                        <br>
-                        
-                        PEITO:<br>
                         <div class="white">
-                        SUPINO RETO<br>
-                        SUPINO INCLINADO<br>
-                        VOADOR<br>
-                        </div>
-                        <br><br>COSTAS:<br>
-                        <div class="white">
-                        SUPINO RETO<br>
-                        SUPINO INCLINADO<br>
-                        VOADOR<br>
+                        1-SUPINO RETO<br>
+                        2-SUPINO INCLINADO<br>
+                        3-VOADOR<br>
+                        4-SUPINO RETO<br>
+                        5-SUPINO INCLINADO<br>
+                        6-VOADOR<br>
+                        7-TRICEPS POLIA<br>
+                        8-TRICEPS CORDA<br>
+                        9-TRICEPS BANCO<br>
+                        10-BARRA DIRETA<br>
+                        11-ROSCA MARTELO<br>
+                        12-ROSCA ALTERNADA<br><br>
                         </div>
                     </div> 
                 </form> 

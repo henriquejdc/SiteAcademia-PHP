@@ -73,6 +73,9 @@ $(document).ready(function(){
                     <li>
                         <a class="page-scroll" href="relatoriof.php">Relatorio Fichas</a>
                     </li>
+                    <li>
+                        <a class="page-scroll" href="avali.html">Avaliação</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -96,7 +99,10 @@ $(document).ready(function(){
                         <label> Divisão Treino</label><br>
                         <input name="divisão" ><br><br>
 
-                        <label> ID do exercicio</label><br>
+                        <label> Objetivo</label><br>
+                        <input name="objetivo" ><br><br>
+
+                        <label> ID do exercicio</label><br> <!-- alterar para redirecionar para outra pegina -->
                         <input name="exerc" ><br><br>
 
                         <input type="submit" value="Cadastrar"><br><br>

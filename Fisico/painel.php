@@ -97,7 +97,7 @@
                         <label> Valor a Pagar </label><br>
                         <input name="valor" autofocus><br><br>
                         <label> Dias de Frequencia </label><br>
-                        <input name="frequencia" autofocus><br><br>
+                        <input name="frequencia" type="number" max="6" autofocus><br><br>
                     
                         <input type="submit" value="Cadastrar"><br><br>
                          
@@ -112,7 +112,17 @@
                         <label> CPF (Números)</label><br>
                         <input name="cpf" require autofocus><br><br>
                     
-                        <input type="submit" value="Cadastrar"><br><br>
+                        <input type="submit" value="Buscar"><br><br>
+                         
+                    </div> 
+                </form> 
+                <h2>CPF da pessoa a Excluir: </h2>
+                <form action="alterarcadastro.php" method="post">
+                    <div class="red">
+                        <label> CPF (Números)</label><br>
+                        <input name="cpf" require autofocus><br><br>
+                    
+                        <input type="submit" value="Buscar"><br><br>
                          
                     </div> 
                 </form> 

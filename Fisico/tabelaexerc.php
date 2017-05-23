@@ -73,6 +73,9 @@ $(document).ready(function(){
                     <li>
                         <a class="page-scroll" href="relatoriof.php">Relatorio Fichas</a>
                     </li>
+                    <li>
+                        <a class="page-scroll" href="avali.html">Avaliação</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

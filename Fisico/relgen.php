@@ -52,9 +52,14 @@
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a class="page-scroll" href="#page-top"></a>
+                    <li>
+                        <a class="page-scroll" href="painel.php">Painel</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="ficha.php">Físico</a>
+                        <a class="page-scroll" href="pagamento.php">Pagamento</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="relatorio.php">Relatorios</a>
                     </li>
                 </ul>
             </div>
@@ -66,31 +71,28 @@
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
-                <h2>FICHA</h2>
+                <h2>Relatório por Gênero [MULHER]</h2>
                 <form action="Script_do_Formulario.php" method="post">
                     <div class="red">
                         <br>
-                        Data de Troca: <div class="white"> 21/4 </div>
+                        Nome: <div class="white">Joana da Silva </div>
                         <br>
-                        Vencimento do pagamento: <div class="white"> 22/5 </div>
+                        Gênero: <div class="white">Mulher</div>
                         <br>
-                        Divisão: <div class="white">PEITO/COSTAS/PERNAS</div>
+                        CPF: <div class="white">8928946549</div>
                         <br>
-                        Repetições: <div class="white"> 3x por exercício</div>
+                        Frequencias: <div class="white"> 3x por exercício</div>
                         <br>
-                        
-                        PEITO:<br>
-                        <div class="white">
-                        SUPINO RETO<br>
-                        SUPINO INCLINADO<br>
-                        VOADOR<br>
-                        </div>
-                        <br><br>COSTAS:<br>
-                        <div class="white">
-                        SUPINO RETO<br>
-                        SUPINO INCLINADO<br>
-                        VOADOR<br>
-                        </div>
+                        -----------------------------------------------------------
+                        <br>
+                        Nome: <div class="white">Joana da Silva </div>
+                        <br>
+                        Gênero: <div class="white">Mulher</div>
+                        <br>
+                        CPF: <div class="white">8928946549</div>
+                        <br>
+                        Frequencias: <div class="white"> 3x por exercício</div>
+                        <br>
                     </div> 
                 </form> 
         </div>

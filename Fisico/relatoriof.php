@@ -23,23 +23,12 @@
     <!-- Theme CSS -->
     <link href="css/grayscale.min.css" rel="stylesheet">
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-
-    var input = '<br><label>Exercicio <input type="text" name="exer[]" /> <a href="#" class="remove">X</a></label>';
-
-    $("input[name='add']").click(function( e ){
-        $('#inputs_adicionais').append( input );
-    });
-
-    $('#inputs_adicionais').delegate('a','click',function( e ){
-        e.preventDefault();
-        $( this ).parent('label').remove();
-    });
-
-});
-</script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 
@@ -73,6 +62,9 @@ $(document).ready(function(){
                     <li>
                         <a class="page-scroll" href="relatoriof.php">Relatorio Fichas</a>
                     </li>
+                    <li>
+                        <a class="page-scroll" href="avali.html">Avaliação</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -83,10 +75,41 @@ $(document).ready(function(){
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
-
-                <h2>Fichas a serem trocadas:</h2>
-
-                <!--Php q puxe os fichas com cpf e data, do dia ou anteriores a ele ja cadastrador -->
+                <h2>FICHAS A SEREM TROCADAS</h2>
+                <form action="Script_do_Formulario.php" method="post">
+                    <div class="red">
+                        <br>
+                            Data de Troca: <div class="white"> 21/4 </div>
+                        <br>
+                            CPF: <div class="white"> 54959196161 </div>
+                        <br>
+                            Nome: <div class="white"> Eduardo</div>
+                        <br>
+                            Objetivo: <div class="white"> Ganhar massa </div>
+                        <br>
+                        ---------------------------------------------------------
+                        <br>
+                            Data de Troca: <div class="white"> 21/4 </div>
+                        <br> 
+                            CPF: <div class="white"> 54959196161 </div>
+                        <br>
+                            Nome: <div class="white"> Eduardo</div>
+                        <br>
+                            Objetivo: <div class="white"> Ganhar massa </div>
+                        <br>
+                        ---------------------------------------------------------
+                        <br>
+                            Data de Troca: <div class="white"> 21/4 </div>
+                        <br>
+                            CPF: <div class="white"> 54959196161 </div>
+                        <br>
+                            Nome: <div class="white"> Eduardo</div>
+                        <br>
+                            Objetivo: <div class="white"> Ganhar massa </div>
+                        <br>
+                        </div>
+                    </div> 
+                </form> 
         </div>
     </section>
 <footer>

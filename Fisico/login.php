@@ -77,7 +77,7 @@
                      <p>Senha<div id="senha"><input type="password" name="senha" size="20">  
                     <br><br></p>
                     
-                    <input type="submit">
+                    <input type="submit" value="Logar">
                     <input type="reset" value="Limpar"></div><br>
                     </div> 
                 </form> 

@@ -23,12 +23,23 @@
     <!-- Theme CSS -->
     <link href="css/grayscale.min.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    var input = '<br><label>Exercicio <input type="text" name="exer[]" /> <a href="#" class="remove">X</a></label>';
+
+    $("input[name='add']").click(function( e ){
+        $('#inputs_adicionais').append( input );
+    });
+
+    $('#inputs_adicionais').delegate('a','click',function( e ){
+        e.preventDefault();
+        $( this ).parent('label').remove();
+    });
+
+});
+</script>
 
 </head>
 
@@ -54,7 +65,16 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="ficha.php">Físico</a>
+                        <a class="page-scroll" href="tabelaexerc.php">Exercicios</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="cficha.php">Cadastro Ficha</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="relatoriof.php">Relatorio Fichas</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="avali.html">Avaliação</a>
                     </li>
                 </ul>
             </div>
@@ -66,31 +86,15 @@
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
-                <h2>FICHA</h2>
-                <form action="Script_do_Formulario.php" method="post">
+
+                <h2>Cadastre o ID do exercicio do CPF:</h2>
+                <!-- Php dos exercicios cadastrados -->
+                <form action="cadastrado1.php" method="post">
                     <div class="red">
-                        <br>
-                        Data de Troca: <div class="white"> 21/4 </div>
-                        <br>
-                        Vencimento do pagamento: <div class="white"> 22/5 </div>
-                        <br>
-                        Divisão: <div class="white">PEITO/COSTAS/PERNAS</div>
-                        <br>
-                        Repetições: <div class="white"> 3x por exercício</div>
-                        <br>
-                        
-                        PEITO:<br>
-                        <div class="white">
-                        SUPINO RETO<br>
-                        SUPINO INCLINADO<br>
-                        VOADOR<br>
-                        </div>
-                        <br><br>COSTAS:<br>
-                        <div class="white">
-                        SUPINO RETO<br>
-                        SUPINO INCLINADO<br>
-                        VOADOR<br>
-                        </div>
+                        <label> ID do exercicio</label><br> <!-- alterar para redirecionar para outra pegina -->
+                        <input name="exerc" ><br><br>
+
+                        <input type="submit" value="Cadastrar"><br><br>
                     </div> 
                 </form> 
         </div>
