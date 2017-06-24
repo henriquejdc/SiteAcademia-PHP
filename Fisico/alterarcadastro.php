@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if(!$_SESSION["cpf"]){
+        session_destroy(); 
+        header('location:login.php')
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -73,30 +81,51 @@
     <section id="about" class="container content-section text-center">
         <div class="row">
                 <h2>Login:</h2>
-                <form action="cadastro.php" method="post">
-                    <div class="red">
-                        <br><label> Nome </label><br>
-                        <input name="nome" require autofocus><br><br>
-                        <label> CPF (Números)</label><br>
-                        <input name="cpf" require autofocus><br><br>
-                        <label> Endereço </label><br>
-                        <input name="Endereço" autofocus><br><br>
-                        <label> Gênero </label><br>
-                        <select name="Genero">
-                          <option value="Homem">Homem</option>
-                          <option value="Mulher">Mulher</option>
-                        </select><br><br>
-                        <label> Nascimento </label><br>
-                        <input type="date" name="dt"><br><br>
-                        <label> Telefone </label><br>
-                        <input type="telefone" name="fone" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}"><br><br>
-                        <label> Senha </label><br>
-                        <input name="Senha" autofocus><br><br>
-                    
-                        <input type="submit" value="Cadastrar"><br><br>
-                         
-                    </div> 
-                </form> 
+
+               <?php  
+                    include 'conexao.php';   
+
+                        $sql =<<<EOF
+                    SELECT * from CADASTROC;
+EOF;
+
+                   $ret = pg_query($db, $sql);
+                   
+                while($row = pg_fetch_row($ret)){
+                    if($_POST['cpf'] == $row[0]  ){
+                        //fazer para mostrar e colocar no lugar para mandar para o banco, enquanto deleta a anterior
+                        <form action="cadastro.php" method="post">
+                            <div class="red">
+                                <br><label> Nome </label><br>
+                                <input name="nome" require autofocus><br><br>
+                                <label> CPF (Números)</label><br>
+                                <input name="cpf" require autofocus><br><br>
+                                <label> Endereço </label><br>
+                                <input name="Endereço" autofocus><br><br>
+                                <label> Gênero </label><br>
+                                <select name="Genero">
+                                  <option value="Homem">Homem</option>
+                                  <option value="Mulher">Mulher</option>
+                                </select><br><br>
+                                <label> Nascimento </label><br>
+                                <input type="date" name="dt"><br><br>
+                                <label> Telefone </label><br>
+                                <input type="telefone" name="fone" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}"><br><br>
+                                <label> Senha </label><br>
+                                <input name="Senha" autofocus><br><br>
+                            
+                                <input type="submit" value="Cadastrar"><br><br>
+                                 
+                            </div> 
+                        </form> 
+                    }
+                }
+                pg_close($db);
+                header('location:login.php');
+                ?>
+
+
+                
         </div>
     </section>
 <footer>

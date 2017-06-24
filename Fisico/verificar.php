@@ -1,73 +1,22 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+                     <?php  
+                         session_start();
+                         include 'conexao.php';   
 
-<head>
+                        $sql =<<<EOF
+                    SELECT * from CADASTROC;
+EOF;
 
-    <link rel="shortcut icon" href="./img/logo.jpg">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+                   $ret = pg_query($db, $sql);
+                   
+                while($row = pg_fetch_row($ret)){
+                    if($_POST['cpf'] == $row[0] && $_POST['senha'] == $row[5] ){
+                        $_SESSION["cpf"] = $_POST['cpf'];
+                        if($_SESSION["cpf"] == "12345" ) header('location:cadastro.php');
+                        else if ($_SESSION["cpf"] == "123456" ) header('location:cficha.php');
+                        else header('location:ficha.php');
+                    }
+                }
+                pg_close($db);
+                header('location:login.php');
+                    ?>
 
-    <title>F.A. Painel </title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <!-- Theme CSS -->
-    <link href="css/grayscale.min.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-                
-                        <?php 
-
-                         if( $cpf == '212121' && $senha =='212121') header('location:ficha.php');
-                         if( $cpf == '121212' && $senha =='121212') header('location:cficha.php');
-                         if( $cpf == && $senha ==) header('location:ficha.php');
-                        ?>
-
-
-
-
-
-        </div>
-    </section>
-<footer>
-        <div class="container text-center">
-            <p>Copyright &copy; Henrique J. D. Corte 2017</p>
-        </div>
-</footer>
- <!-- jQuery -->
-    <script src="vendor/jquery/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/grayscale.min.js"></script>
-
-</body>
-
-</html>

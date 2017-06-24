@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!$_SESSION["cpf"]){
+        session_destroy(); 
+        header('location:login.php')
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -74,7 +81,7 @@ $(document).ready(function(){
                         <a class="page-scroll" href="relatoriof.php">Relatorio Fichas</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="avali.html">Avaliação</a>
+                        <a class="page-scroll" href="avali.php">Avaliação</a>
                     </li>
                 </ul>
             </div>
@@ -88,6 +95,8 @@ $(document).ready(function(){
         <div class="row">
 
                 <h2>Novo Exercicio</h2>
+
+                <a href="relexer.php">Exercicios cadastrados </a> <br>
 
                 <form action="cadastradoexer.php" method="post">
                     <div class="red">

@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!$_SESSION["cpf"]){
+        session_destroy(); 
+        header('location:login.php')
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -93,11 +100,13 @@
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
+            <div class="white">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Sobre Nós</h2>
                 <p>Físico é uma academia com mais de 10 anos de funciomaneto, que sempre esta buscando melhor atender seus clientes.</p>
                 <p>Hoje contando com amplo espaço e diversidade de aparelhos, juntamente com profissionais para prontamente atender alunos em busca de seus objetivos.</p>
                 <p>Venha conhecer, atividades físicas melhoram seu bem estar.</p>
+            </div>
             </div>
         </div>
     </section>
@@ -119,6 +128,7 @@
     <section id="contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
+                <div  class="white">
                 <h2>Contate no Email caso dúvidas</h2>
                 <p>Email para dúvidas:</p>
                 <p><a href="mailto:fisicoacademia@gmail.com">FisicoAcademia@gmail.com</a>
@@ -131,6 +141,7 @@
                         <a href="https://plus.google.com/FisicoAcademia/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
                     </li>
                 </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -143,7 +154,9 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
+            <div class="white">
             <p>Copyright &copy; Henrique J. D. Corte 2017</p>
+            </div>
         </div>
     </footer>
 

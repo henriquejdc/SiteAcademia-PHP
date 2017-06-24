@@ -6,6 +6,5 @@
 
 			   $con=@mysql_connect($local_serve,$user,$senha) or die("Não conectou");
 
-			   $db=@mysql_select_db($banco,$con) or die ("Não conectou ao banco");
-
+			   $db=@mysql_select_db($banco,$con) or die("Não conectou ao banco");
 ?>

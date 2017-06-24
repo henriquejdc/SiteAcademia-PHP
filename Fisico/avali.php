@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!$_SESSION["cpf"]){
+        session_destroy(); 
+        header('location:login.php')
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -135,74 +142,59 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
             <h2> Avaliação Física </h2>
             <div class="red"><form>
                     <script language="JavaScript" src="./js/bodycomp.js.download"></script>
-                    <br><br><br><select name="NumberSites">
-                                
+                    <br><br><br><p>
+                                Número de pregas cutâneas que vão ser medidas.
+                                  <select name="NumberSites">
                                   <option value="7">7 Pregas </option>
                                   <option value="3">3 Pregas </option>
-                                </select>
-                                Número de pregas cutâneas que vão ser medidas.</span></p>
-                              <p class="Verdana_preto_bold">
+                                </select></p>
+                              <br><br><p class="Verdana_preto_bold"> Sexo 
                                 <select name="Sex">
                                   <option value="Male">Masculino</option>
                                   <option value="Female">Feminino</option>
-                                </select>
-                                Sexo </p>
+                                </select></p>
+                              <p class="Verdana_preto_bold">  Idade (em anos)
+                                <input name="Age" size="5"></p>
+                              <p class="Verdana_preto_bold">   Peso (em kg - ex: 54.6   kg)
+                                <input name="Weight" size="5">       </p>                      
+                              <p>Tríceps (ex: 5.6
+                                mm)
+                                <input name="Triceps" size="5"></p>
+                                 
+                              <p class="Verdana_preto_bold"> Peito
+                                <input name="Pectoral" size="5"></p>
+                                
                               <p class="Verdana_preto_bold">
-                                <input name="Age" size="5">
-                                 Idade (em anos)</p>
+                                Sub-Axilar
+                                <input name="Midaxilla" size="5"></p>
                               <p class="Verdana_preto_bold">
-                                <input name="Weight" size="5">
-                                Peso (em kg - ex: 54.6
-                                kg)</p>
-                              <p>
-                              <p> Ainda
-                                    não calcule! Vá ao lado e coloque
-                                    o valor de suas dobras cutâneas e depois
-                                    clique calcular:</p>
-                             
-                              <p>
-                                <span class="Verdana_preto_bold">
-                                <input name="Triceps" size="5">
-                                 Tríceps (ex: 5.6
-                                mm)</span></p>
+                                Subescapular
+                                <input name="Subscapula" size="5"></p>
                               <p class="Verdana_preto_bold">
-                                <input name="Pectoral" size="5">
-                                 Peito</p>
+                                Abdominal
+                                <input name="Abdomen" size="5"></p>
                               <p class="Verdana_preto_bold">
-                                <input name="Midaxilla" size="5">
-                                Sub-Axilar</p>
+                                Supra-ilíaca
+                                <input name="Suprailiac" size="5"></p>
                               <p class="Verdana_preto_bold">
-                                <input name="Subscapula" size="5">
-                                Subescapular</p>
-                              <p class="Verdana_preto_bold">
-                                <input name="Abdomen" size="5">
-                                Abdominal</p>
-                              <p class="Verdana_preto_bold">
-                                <input name="Suprailiac" size="5">
-                                Supra-ilíaca</p>
-                              <p class="Verdana_preto_bold">
-                                <input name="Quadriceps" size="5">
-                                Coxa</p>
+                                Coxa
+                                <input name="Quadriceps" size="5"></p>
                              <p align="center">
                                 <input onclick="calc(this.form)" type="button" value="Calcular" name="button">
                                 <input name="Reset" type="reset" value="Limpar">
                               </p>    
                             <h2>RESULTADOS</h2>
-                              <p>
-                                <input name="Density" size="7">
-                                Densidade Corporal</p>
-                              <p>
-                                <input name="LeanWeight" size="7">
-                                Massa Magra (kg)</p>
-                              <p>
-                                <input name="FatWeight" size="7">
-                                Massa Gorda (kg)</p>
-                              <p>
-                                <input name="PercentFat" size="7">
-                                 % Gordura</p>
-                              <p>
-                                <input name="PopulationAverage" size="7">
-                                %Média da Pop.</p>
+                              <p>   Densidade Corporal
+                                <input name="Density" size="7"></p>
+                              <p>   Massa Magra (kg)
+                                <input name="LeanWeight" size="7"></p>
+                              <p> Massa Gorda (kg)
+                                <input name="FatWeight" size="7"></p>
+                              <p>% Gordura
+                                <input name="PercentFat" size="7"></p>
+                                 
+                              <p>   %Média da Pop.
+                                <input name="PopulationAverage" size="7"></p>
                   </form>
             
             </div>

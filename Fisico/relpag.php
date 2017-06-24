@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!$_SESSION["cpf"]){
+        session_destroy(); 
+        header('location:login.php')
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 

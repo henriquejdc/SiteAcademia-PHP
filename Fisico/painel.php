@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!$_SESSION["cpf"]){
+        session_destroy(); 
+        header('location:login.php')
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -72,7 +79,7 @@
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
-                <h2>Login:</h2>
+               <div class="white"> <h2>Cadastro:</h2> </div>
                 <form action="cadastro.php" method="post">
                     <div class="red">
                         <br><label> Nome </label><br>
@@ -104,7 +111,7 @@
                     </div> 
                 </form> 
                 <br><br>
-                <h2>CPF ou Nome da pessoa para ser alterado: </h2>
+                <div class="white"><h2>CPF ou Nome da pessoa para ser alterado: </h2></div>
                 <form action="alterarcadastro.php" method="post">
                     <div class="red">
                         <br><label> Nome </label><br>
@@ -116,8 +123,8 @@
                          
                     </div> 
                 </form> 
-                <h2>CPF da pessoa a Excluir: </h2>
-                <form action="alterarcadastro.php" method="post">
+                <div class="white"><h2>CPF da pessoa a Excluir: </h2></div>
+                <form action="delet.php" method="post">
                     <div class="red">
                         <label> CPF (Números)</label><br>
                         <input name="cpf" require autofocus><br><br>
@@ -130,7 +137,9 @@
     </section>
 <footer>
     <div class="container text-center">
+    <div class="white">  
         <p>Copyright &copy; Henrique J. D. Corte 2017</p>
+        </div>
     </div>
 </footer>
  <!-- jQuery -->

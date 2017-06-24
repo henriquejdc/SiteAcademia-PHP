@@ -35,8 +35,10 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
+
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
+
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     Menu <i class="fa fa-bars"></i>
@@ -69,7 +71,7 @@
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
-                <h2>Login:</h2>
+                <div class="white"> <h2>Login:</h2> </div>
                 <form action="verificar.php" method="post">
                     <div class="red">    
                      <p>CPF<div id="cpf"><input type="text" name="cpf" size="20">
@@ -86,7 +88,9 @@
 
     <footer>
         <div class="container text-center">
+        <div class="white">
             <p>Copyright &copy; Henrique J. D. Corte 2017</p>
+        </div>
         </div>
     </footer>
  <!-- jQuery -->
